@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Basic Website</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+		<header>
+			<h1>Flaherty Corner</h1>
+        
+			<nav>
+				<ul>
+					<li><a href="#" id="home-tab" onclick="showSection('home')">Home</a></li>
+					<li><a href="#" id="about-tab" onclick="showSection('about')">About</a></li>
+					<li><a href="#" id="contact-tab" onclick="showSection('contact')">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+	<div class="background">
+
+		<main>
+			<section id="home" style="display: none;">
+				<h2>Home</h2>
+				<br>
+				<p>This is a simple website to demonstrate HTML, CSS, and JavaScript code.</p>
+				<br>
+				<p>This will be used as a personal space to document our families interests and achievements along with software development practices and documentation</p>
+				<br>
+				<br>
+				<h2>Contact Us</h2>
+				<br>
+				<form id="contact-form">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<button type="submit">Submit</button>
+				</form>
+		
+			</section>
+		
+		
+
+			<section id="about" style="display: none;">
+				<h2>About Us</h2>
+				<br>
+				<br>
+				<p>This is a simple website to demonstrate HTML, CSS, and JavaScript.</p>
+				<br>
+				<p>The objective of this page is to be a One-Stop-Shop for all documentation and developer content I am currently working on along with Blogs on different projects etc</p>
+				<br>
+				<br>
+				<div class="image-container">
+					<img src="flaherty_crest.jpg" alt="Flaherty Crest">
+				</div>
+			</section>
+		
+			<section id="contact" style="display: none;">
+				<h2>Contact Us</h2>
+				<br>
+				<form id="contact-form">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<button type="submit">Submit</button>
+				</form>
+				<p id="success-message" style="display: none;">Form submitted successfully!</p>
+			</section>
+		</main>
+	</div>
+	
+    <script src="script.js"></script>
+	<script>
+        // JavaScript code to hide all sections except the default one on page load
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id !== 'home') {
+                    section.style.display = 'none';
+                }
+            });
+			
+			// Restore the active tab from localStorage
+            const activeTab = localStorage.getItem('activeTab');
+            if (activeTab) {
+                showSection(activeTab);
+            }
+        });	
+		
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the opacity (last value) as needed */
+    height: 100%;
+    overflow: auto;
+}
+
+h1, h2 {
+    font-family: 'Your Heading Font', sans-serif;
+	color: #ff9900;
+}
+
+header {
+    background: linear-gradient(to bottom, #333, #555);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f87500;
+}
+
+/* Center the image horizontally and vertically */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 312px;
+}
+
+/* Style the image if needed */
+.image-container img {
+    max-width: 100%;
+}
